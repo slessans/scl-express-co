@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/slessans/scl-express-co.svg?branch=master)](https://travis-ci.org/slessans/scl-express-co)
+
 # Express Co
 Small, flexible utility for wrapping express middleware in [co](https://github.com/tj/co) so that 
 you can use async/await-like syntax via generators yielding promises, and not deal with calling
