@@ -92,7 +92,7 @@ describe('scl-express-co', () => {
 
             const fnc = expressCo.wrap(function * () {}, {returnPromise: true});
 
-            return fnc('req', 'res', next).catch(function (error) {
+            return fnc('req', 'res', next).catch((error) => {
                 if (error !== ERROR) {
                     throw error;
                 }
