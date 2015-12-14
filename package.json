@@ -4,10 +4,11 @@
   "description": "Small library for wrapping express middleware in co for use with yielding promises inside of generators for cleaner code",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint index.js test/*.js",
+    "lint": "./node_modules/.bin/eslint index.js test.js",
     "pretest": "npm run-script lint",
-    "test": "./node_modules/.bin/istanbul cover -x test.js ./node_modules/.bin/_mocha -- test.js",
-    "posttest": "./node_modules/.bin/istanbul check-coverage"
+    "test": "node_modules/.bin/istanbul cover -x test.js ./node_modules/.bin/_mocha -- --reporter dot",
+    "pretest-travis": "npm run-script lint",
+    "test-travis": "node_modules/.bin/istanbul cover -x test.js ./node_modules/.bin/_mocha --report lcovonly -- --reporter dot"
   },
   "repository": {
     "type": "git",
