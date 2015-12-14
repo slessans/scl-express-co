@@ -21,14 +21,24 @@ const express = require('express');
 const router = express.Router();
 const expressCo = require('scl-express-co');
 
-// parse the token from the request and load the user 
+// the simplest usage: run an async function. if promise is rejected, next(error) is called
+// otherwise next() is called once promise is reolved
+router.use(expressCo.wrap(function * (req, res) {
+  req.user = yield parseToken(req); // some function returning a promise
+}));
+
+// do something more complex: for instance check user permissions
+// here we incorporate custom error handling for one specific case and fall back
+// on next(error) for the rest
 router.use(expressCo.wrap(function * (req, res) {
   try {
-    req.user = yield parseToken(req); // some function returning a promise
+    // some function returning a promise if user can view books
+    // or rejecting if user cannot view books.
+    yield canUserViewBooks(req.user);
   } catch (error) {
     // catch errors as if this was a standard/non-async call
-    if (error.name === 'user-not-found') {
-      res.status(401).json('error': 'Invalid token.');
+    if (error.name === 'user-cannot-view-books') {
+      res.status(403).json('error': 'You cannot view books.');
       return false; // dont call next, we already handled the response. end the request here
     }
     // thrown errors will cause next(error) to be called,
