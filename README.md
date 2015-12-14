@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/slessans/scl-express-co.svg?branch=master)](https://travis-ci.org/slessans/scl-express-co)
+[![Coverage Status](https://coveralls.io/repos/slessans/scl-express-co/badge.svg?branch=master&service=github)](https://coveralls.io/github/slessans/scl-express-co?branch=master)
 
 # Express Co
 Small, flexible utility for wrapping express middleware in [co](https://github.com/tj/co) so that 
