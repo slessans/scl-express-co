@@ -1,7 +1,9 @@
-[![Build Status](https://travis-ci.org/slessans/scl-express-co.svg?branch=master)](https://travis-ci.org/slessans/scl-express-co)
-[![Coverage Status](https://coveralls.io/repos/slessans/scl-express-co/badge.svg?branch=master&service=github)](https://coveralls.io/github/slessans/scl-express-co?branch=master)
-
 # Express Co
+
+[![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
+
 Small, flexible utility for wrapping express middleware in [co](https://github.com/tj/co) so that 
 you can use async/await-like syntax via generators yielding promises, and not deal with calling
 the `next` function or handling errors directly (unless you want to!).
@@ -65,3 +67,11 @@ router.get('/:book', expressCo.wrapTerminal(function * (req, res) {
   res.status(200).json({book, isFavorite});
 }));
 ```
+
+[npm-image]: https://img.shields.io/npm/v/scl-express-co.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/scl-espress-co
+[travis-image]: https://img.shields.io/travis/slessans/scl-express-co.svg?style=flat-square
+[travis-url]: https://travis-ci.org/slessans/scl-express-co
+[coveralls-image]: https://img.shields.io/coveralls/slessans/scl-express-co.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/github/slessans/scl-express-co
+
