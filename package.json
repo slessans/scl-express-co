@@ -1,0 +1,40 @@
+{
+  "name": "scl-express-co",
+  "version": "0.0.1",
+  "description": "Small library for wrapping express middleware in co for use with yielding promises inside of generators for cleaner code",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint index.js test/*.js",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover -x test.js ./node_modules/.bin/_mocha -- test.js",
+    "posttest": "./node_modules/.bin/istanbul check-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slessans/scl-express-co.git"
+  },
+  "keywords": [
+    "express",
+    "co",
+    "es6",
+    "middleware"
+  ],
+  "author": "Scott Lessans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slessans/scl-express-co/issues"
+  },
+  "homepage": "https://github.com/slessans/scl-express-co#readme",
+  "dependencies": {
+    "co": "4.6.0",
+    "lodash": "3.10.1"
+  },
+  "devDependencies": {
+    "chai": "3.4.1",
+    "eslint": "1.10.3",
+    "eslint-config-defaults": "7.1.1",
+    "eslint-plugin-filenames": "0.2.0",
+    "istanbul": "0.4.1",
+    "mocha": "2.3.4"
+  }
+}
