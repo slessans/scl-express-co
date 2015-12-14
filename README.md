@@ -69,7 +69,7 @@ router.get('/:book', expressCo.wrapTerminal(function * (req, res) {
 ```
 
 [npm-image]: https://img.shields.io/npm/v/scl-express-co.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/scl-espress-co
+[npm-url]: https://npmjs.org/package/scl-express-co
 [travis-image]: https://img.shields.io/travis/slessans/scl-express-co.svg?style=flat-square
 [travis-url]: https://travis-ci.org/slessans/scl-express-co
 [coveralls-image]: https://img.shields.io/coveralls/slessans/scl-express-co.svg?style=flat-square
