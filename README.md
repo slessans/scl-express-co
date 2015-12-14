@@ -36,7 +36,7 @@ router.use(expressCo.wrap(function * (req, res) {
 ```
 
 ### expressCo.wrapParam(..)
-This is a simple wrapper to the `expressCo.wrap(..)` function that sets the nextIndex option according to the position
+This is a simple wrapper to the `expressCo.wrap(..)` function that sets `options.nextIndex` according to the position
 of the next function in the param handler (its actually the same index right now, but if it changes in the future, 
 you will be happy about the extra layer of abstraction).
 
