@@ -32,8 +32,8 @@ router.use(expressCo.wrap(function * (req, res) {
 // on next(error) for the rest
 router.use(expressCo.wrap(function * (req, res) {
   try {
-    // some function returning a promise if user can view books
-    // or rejecting if user cannot view books.
+    // some function that returns a promise which resolves if user can view books
+    // and rejects if user cannot view books.
     yield canUserViewBooks(req.user);
   } catch (error) {
     // catch errors as if this was a standard/non-async call
