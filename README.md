@@ -3,6 +3,8 @@
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
+[![Dependencies][deps-image]][deps-url]
+[![Dev Dependencies][deps-dev-image]][deps-dev-url]
 
 Small, flexible utility for wrapping express middleware in [co](https://github.com/tj/co) so that 
 you can use async/await-like syntax via generators yielding promises, and not deal with calling
@@ -80,8 +82,16 @@ router.get('/:book', expressCo.wrapTerminal(function * (req, res) {
 
 [npm-image]: https://img.shields.io/npm/v/scl-express-co.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/scl-express-co
+
 [travis-image]: https://img.shields.io/travis/slessans/scl-express-co.svg?style=flat-square
 [travis-url]: https://travis-ci.org/slessans/scl-express-co
+
 [coveralls-image]: https://img.shields.io/coveralls/slessans/scl-express-co.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/github/slessans/scl-express-co
+
+[deps-image]: https://img.shields.io/david/slessans/scl-express-co.svg?style=flat-square
+[deps-url]: https://david-dm.org/slessans/scl-express-co
+
+[deps-dev-image]: https://img.shields.io/david/dev/slessans/scl-express-co.svg?style=flat-square
+[deps-dev-url]: https://david-dm.org/slessans/scl-express-co#info=devDependencies
 
