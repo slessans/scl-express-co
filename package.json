@@ -1,6 +1,6 @@
 {
   "name": "scl-express-co",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Small library for wrapping express middleware in co for use with yielding promises inside of generators for cleaner code",
   "main": "index.js",
   "scripts": {
